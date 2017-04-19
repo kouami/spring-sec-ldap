@@ -32,7 +32,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 		.userSearchFilter("uid={0}")
 		.groupSearchBase("ou=apps")
 		.groupSearchFilter("uniqueMember={0}")
-		.contextSource(null)
+		.contextSource(contextSource())
 		.passwordCompare()
 		.passwordEncoder(new LdapShaPasswordEncoder())
 		.passwordAttribute("userPassword");

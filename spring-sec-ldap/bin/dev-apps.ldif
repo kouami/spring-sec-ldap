@@ -1,0 +1,134 @@
+version: 1
+
+dn: cn=Adam Enwright,ou=devs,dc=applications,dc=com
+objectClass: organizationalPerson
+objectClass: person
+objectClass: inetOrgPerson
+objectClass: top
+cn: Adam Enwright
+sn: Enwright
+givenName: Adam
+uid: adam
+userPassword:: e1NIQX1RaGsrZ3ZnTmdtNmNsSHFVOTVLdEFTV1dqdnc9
+
+dn: cn=Babu Krishnamoorthy,ou=devs,dc=applications,dc=com
+objectClass: organizationalPerson
+objectClass: person
+objectClass: inetOrgPerson
+objectClass: top
+cn: Babu Krishnamoorthy
+sn: Krishnamoorthy
+givenName: babu
+uid: babu
+userPassword:: e1NIQX1QRk5lT3V2N3NQNDdJTWYwMkdqUkFrNUoyN2s9
+
+dn: dc=applications,dc=com
+objectclass: top
+objectclass: domain
+dc: applications
+
+dn: cn=ECPR,ou=apps,dc=applications,dc=com
+objectClass: groupOfUniqueNames
+objectClass: top
+cn: ECPR
+uniqueMember: cn=Ashok Shankar,ou=devs,dc=applications,dc=com
+uniqueMember: cn=Neelika Chiramana,ou=devs,dc=applications,dc=com
+uniqueMember: cn=Emmanuel Akolly,ou=devs,dc=applications,dc=com
+uniqueMember: cn=Joshua Enwright,ou=devs,dc=applications,dc=com
+uniqueMember: cn=Babu Krishnamoorthy,ou=devs,dc=applications,dc=com
+uniqueMember: cn=Adam Enwright,ou=devs,dc=applications,dc=com
+
+dn: cn=Ashok Shankar,ou=devs,dc=applications,dc=com
+objectClass: organizationalPerson
+objectClass: person
+objectClass: inetOrgPerson
+objectClass: top
+cn: Ashok Shankar
+sn: Shankar
+givenName: Ashok
+uid: ashok
+userPassword:: e1NIQX1mbEJERlkvZUtDT2ZnRUczc3VvNGFUZnZhQUk9
+
+dn: cn=MCIE,ou=apps,dc=applications,dc=com
+objectClass: groupOfUniqueNames
+objectClass: top
+cn: MCIE
+uniqueMember: cn=Ashok Shankar,ou=devs,dc=applications,dc=com
+uniqueMember: cn=Neelika Chiramana,ou=devs,dc=applications,dc=com
+
+dn: cn=Neelika Chiramana,ou=devs,dc=applications,dc=com
+objectClass: organizationalPerson
+objectClass: person
+objectClass: inetOrgPerson
+objectClass: top
+cn: Neelika, Chiramana
+cn: neelika chiramana
+sn: Chiramana
+givenName: Neelika
+uid: neelika
+userPassword:: e1NIQX10ZjBpZUdwcUkwWTdMajd5NFV1bVlYUERZcXc9
+
+dn: ou=devs,dc=applications,dc=com
+objectClass: organizationalUnit
+objectClass: top
+ou: devs
+
+dn: cn=EBSBB,ou=apps,dc=applications,dc=com
+objectClass: groupOfUniqueNames
+objectClass: top
+cn: EBSBB
+uniqueMember: cn=Emmanuel Akolly,ou=devs,dc=applications,dc=com
+
+dn: cn=Emmanuel Akolly,ou=devs,dc=applications,dc=com
+objectClass: organizationalPerson
+objectClass: person
+objectClass: inetOrgPerson
+objectClass: top
+cn: Emmanuel Akolly
+sn: Akolly
+givenName: Emmanuel
+uid: emmanuel
+userPassword:: e1NIQX1xTkVJeStxcnQvWmxTVnh4d0RvdGNjV0hPblU9
+
+dn: cn=MCLBS,ou=apps,dc=applications,dc=com
+objectClass: groupOfUniqueNames
+objectClass: top
+cn: MCLBS
+uniqueMember: cn=Joshua Enwright,ou=devs,dc=applications,dc=com
+uniqueMember: cn=Emmanuel Akolly,ou=devs,dc=applications,dc=com
+uniqueMember: cn=Babu Krishnamoorthy,ou=devs,dc=applications,dc=com
+
+dn: ou=apps,dc=applications,dc=com
+objectClass: organizationalUnit
+objectClass: top
+ou: apps
+
+dn: cn=Efoe Akolly,ou=devs,dc=applications,dc=com
+objectclass: inetOrgPerson
+objectclass: organizationalPerson
+objectclass: person
+objectclass: top
+cn: Efoe Akolly
+sn: Akolly
+givenName: Efoe
+uid: efoe
+userPassword:: e1NIQX1xTkVJeStxcnQvWmxTVnh4d0RvdGNjV0hPblU9
+
+dn: cn=Joshua Enwright,ou=devs,dc=applications,dc=com
+objectClass: organizationalPerson
+objectClass: person
+objectClass: inetOrgPerson
+objectClass: top
+cn: Joshua Enwright
+sn: Enwright
+givenName: Joshua
+uid: joshua
+userPassword:: e1NIQX1PSDBQK1VFbHVhRkQ4VmRLYlMyeXZNT3liQkE9
+
+dn: cn=SWBS,ou=apps,dc=applications,dc=com
+objectClass: groupOfUniqueNames
+objectClass: top
+cn: SWBS
+uniqueMember: cn=Emmanuel Akolly,ou=devs,dc=applications,dc=com
+uniqueMember: cn=Ashok Shankar,ou=devs,dc=applications,dc=com
+

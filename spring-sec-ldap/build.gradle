@@ -27,6 +27,13 @@ dependencies {
 	compile('org.springframework.boot:spring-boot-starter-security')
 	compile('org.springframework.boot:spring-boot-starter-thymeleaf')
 	compile('org.springframework.boot:spring-boot-starter-web')
+	compile('org.apache.directory.jdbm:apacheds-jdbm1:2.0.0-M2')
+	//compile('org.apache.directory.server:apacheds-all:2.0.0-M10')
+	compile("org.springframework:spring-tx")
+	compile('org.springframework.ldap:spring-ldap-core')
+	compile('com.unboundid:unboundid-ldapsdk:3.2.1')
+	compile('org.springframework.security:spring-security-ldap')
+	compile('org.thymeleaf.extras:thymeleaf-extras-springsecurity4:2.1.2.RELEASE')
 	runtime('org.springframework.boot:spring-boot-devtools')
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 }

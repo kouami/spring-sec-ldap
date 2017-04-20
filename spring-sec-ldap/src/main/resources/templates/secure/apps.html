@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>index</title>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="/css/bootstrap.min-3.3.7.css" />
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="/css/bootstrap-theme.min-3.3.7.css" />
+</head>
+<body>
+	<div class="container">
+		Here are the applications you are authorized to work on:
+		<div class="row">
+			<div class="col-sm-6 col-md-2">
+				<div sec:authorize="hasRole('ROLE_ECPR')">
+					<div class="thumbnail">
+						<img src="..." alt="..."/>
+						<div class="caption">
+							<h3>ECPR App</h3>
+							<p>...</p>
+							<p>
+								<a href="#" class="btn btn-primary" role="button">Button</a> 
+							</p>
+						</div>
+					</div>
+				</div>
+				</div>
+				<div class="col-sm-6 col-md-2">
+				<div sec:authorize="hasRole('ROLE_MCIE')">
+					<div class="thumbnail">
+						<img src="/img/web-app-cut.png" alt="..."/>
+						<div class="caption">
+							<h3>MCIE App</h3>
+							<p>...</p>
+							<p>
+								<a href="#" class="btn btn-primary" role="button">Button</a> 
+							</p>
+						</div>
+					</div>
+				</div>
+				</div>
+				<div class="col-sm-6 col-md-2">
+				<div sec:authorize="hasRole('ROLE_MCLBS')">
+					<div class="thumbnail">
+						<img src="/img/web-app-cut.png" alt="..."/>
+						<div class="caption">
+							<h3>MCLBS App</h3>
+							<p>...</p>
+							<p>
+								<a href="#" class="btn btn-primary" role="button">Button</a> 
+							</p>
+						</div>
+					</div>
+				</div>
+				</div>
+				<div class="col-sm-6 col-md-2">
+				<div sec:authorize="hasRole('ROLE_SWBS')">
+					<div class="thumbnail">
+						<img src="..." alt="..."/>
+						<div class="caption">
+							<h3>SWBS App</h3>
+							<p>...</p>
+							<p>
+								<a href="#" class="btn btn-primary" role="button">Button</a> 
+							</p>
+						</div>
+					</div>
+				</div>
+				</div>
+				<div class="col-sm-6 col-md-2">
+				<div sec:authorize="hasRole('ROLE_EBSBB')">
+					<div class="thumbnail">
+						<img src="..." alt="..."/>
+						<div class="caption">
+							<h3>EBSBB App</h3>
+							<p>...</p>
+							<p>
+								<a href="#" class="btn btn-primary" role="button">Button</a>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="/js/jquery.min-1.12.4.js"></script>
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="/js/bootstrap.min-3.3.7.js"></script>
+</body>
+</html>

@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class SecurityController {
 	
-	@RequestMapping("/home")
+	@RequestMapping("/secure/apps")
 	public String home(Principal currentUser) {
-		return "home";
+		return "secure/apps";
 	}
 }

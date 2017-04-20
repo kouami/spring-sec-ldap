@@ -2,19 +2,57 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>index</title>
 <!-- Latest compiled and minified CSS -->
-<link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+<link rel="stylesheet" href="/css/bootstrap.min-3.3.7.css" />
 
 <!-- Optional theme -->
-<link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"/>
+<link rel="stylesheet" href="/css/bootstrap-theme.min-3.3.7.css" />
 </head>
 <body>
+<style>
+   .jumbotron {
+    position: relative;
+    background: linear-gradient(#aa076b, #61045f);
+    
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    overflow: hidden;
+    }
+    </style>
+	<div class="container">
+		<nav class="navbar navbar-inverse">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="#">WebSiteName</a>
+				</div>
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="#">Home</a></li>
+					<li><a href="#">Page 1</a></li>
+					<li><a href="#">Page 2</a></li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#"><span class="glyphicon glyphicon-user"></span>
+							Sign Up</a></li>
+					<li><a href="#"><span class="glyphicon glyphicon-log-in"></span>
+							Login</a></li>
+				</ul>
+			</div>
+		</nav>
+		<div class="jumbotron text-center">
+			<h1 style="color:white;">Developer to Application Matrix</h1>
+			<p style="color:white">This web site displays all the applications a developer has access to.</p>
+			<p class="lead">
+               <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+            </p>
+		</div>
+	</div>
 
-Hello World
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="/js/jquery.min-1.12.4.js"></script>
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="/js/bootstrap.min-3.3.7.js"></script>
 </body>
 </html>
+

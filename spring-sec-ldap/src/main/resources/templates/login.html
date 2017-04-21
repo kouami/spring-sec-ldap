@@ -30,6 +30,12 @@
 	-webkit-border-radius: 50%;
 	border-radius: 50%;
 }
+body, html{
+    background-color:#34515E;
+   font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 18px;
+
+}
 </style>
 	<div class="container" style="margin-top: 40px">
 		<div class="row">
@@ -39,12 +45,13 @@
 						<strong> Sign in to continue</strong>
 					</div>
 					<div class="panel-body">
+					    <p th:if="${param.error}" class="error">Wrong user or password</p>
 						<form role="form" th:action="@{/login}" method="POST" autocomplete="off">
 							<fieldset>
 								<div class="row">
 									<div class="center-block">
 										<img class="profile-img"
-											src=""
+											src="/img/login_person.png"
 											alt=""/>
 									</div>
 								</div>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+<head>
+<meta charset="UTF-8"/>
+<title>Insert title here</title>
+<link rel="stylesheet" href="/css/bootstrap.min-3.3.7.css" />
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'/>
+<link rel="stylesheet" href="/css/registration-form.css" />
+</head>
+<body>
+
+<div class="container-fluid">
+	 <form action="/register" method="POST" class="register-form"> 
+      <div class="row">      
+           <div class="col-md-4 col-sm-4 col-lg-4">
+              <label for="firstName">NAME</label>
+               <input name="firstName" class="form-control" type="text"/>    
+           </div>            
+      </div>
+      <div class="row">
+           <div class="col-md-4 col-sm-4 col-lg-4">
+              <label for="email">EMAIL</label>
+               <input name="email" class="form-control" type="email"/>             
+           </div>            
+      </div>
+      <div class="row">
+           <div class="col-md-4 col-sm-4 col-lg-4">
+              <label for="password">PASSWORD</label>
+               <input name="password" class="form-control" type="password"/>             
+           </div>            
+      </div>
+      <hr/>
+      <div class="row">
+           <div class="col-md-6 col-sm-6 col-xs-6 col-lg-6">
+           <input type="submit" id="submit-form" class="hidden" />
+           <label for="submit-form" class="btn btn-default regbutton">Register</label>
+          </div>
+          <div class="col-md-6 col-sm-6 col-xs-6 col-lg-6">
+           <a href="/login" class="btn btn-default logbutton">Sign up</a>           
+          </div>          
+      </div>    
+    </form>
+</div>
+
+<script src="/js/jquery.min-1.12.4.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="/js/bootstrap.min-3.3.7.js"></script>
+</body>
+</html>

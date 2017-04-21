@@ -7,6 +7,7 @@ import java.util.Arrays;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.ldap.core.LdapTemplate;
 import org.springframework.security.authentication.encoding.LdapShaPasswordEncoder;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -47,15 +48,20 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 		return new DefaultSpringSecurityContextSource(Arrays.asList("ldap://localhost:10389"), "dc=applications,dc=com");
 	}
 	
+	@Bean
+	public LdapTemplate getLdapTemplate() {
+		return new LdapTemplate(contextSource());
+	}
+	
 	/*
 	 * (non-Javadoc)
 	 * @see org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter#configure(org.springframework.security.config.annotation.web.builders.HttpSecurity)
 	 */
 	@Override
 	public void configure(HttpSecurity http) throws Exception {
-		http.authorizeRequests().antMatchers("/css/**","/js/**","/fonts/**","/img/**", "/", "/index").permitAll();
+		http.authorizeRequests().antMatchers("/css/**","/js/**","/fonts/**","/img/**", "/", "/index","/registration").permitAll();
 		http.formLogin().loginPage("/login").permitAll().defaultSuccessUrl("/secure/apps").failureUrl("/login?error=true")
-		.and().logout().logoutSuccessUrl("/login.html");
+		.and().logout().logoutSuccessUrl("/login.html").invalidateHttpSession(true).deleteCookies("JSESSIONID");
 		http.authorizeRequests().anyRequest().authenticated();
 	}
 }

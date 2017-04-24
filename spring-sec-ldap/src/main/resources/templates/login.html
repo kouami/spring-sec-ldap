@@ -62,18 +62,18 @@ body, html{
 												<span class="input-group-addon"> <i
 													class="glyphicon glyphicon-user"></i>
 												</span> 
-												<input class="form-control" name="username" id="username" type="text" autofocus="autofocus" />
+												<input class="form-control" name="username" id="username" type="text" autofocus="autofocus" data-bind="value: userName" />
 											</div>
 										</div>
 										<div class="form-group">
 											<div class="input-group">
 												<span class="input-group-addon"> 
 												<i class="glyphicon glyphicon-lock"></i>
-												</span> <input class="form-control" name="password" id="password" type="password" />
+												</span> <input class="form-control" name="password" id="password" type="password" data-bind="value: password"/>
 											</div>
 										</div>
 										<div class="form-group">
-											<input type="submit" class="btn btn-lg btn-primary btn-block" value="Sign in" />
+											<input type="submit" class="btn btn-lg btn-primary btn-block" value="Sign in" data-bind="enable: buttonEnabled"/>
 										</div>
 									</div>
 								</div>
@@ -87,9 +87,21 @@ body, html{
 			</div>
 		</div>
 	</div>
-
+    <script type="text/javascript">
+     function LoginViewModel() {
+    	 this.userName = ko.observable("");
+    	 this.password = ko.observable("");
+    	 this.buttonEnabled = ko.computed(function(){
+    		 return (this.userName() !=="") && (this.password() !="");
+    	 }, this);
+     }
+     
+     ko.applyBindings(new LoginViewModel());
+    </script>
+    
 	<script src="/js/jquery.min-1.12.4.js"></script>
 	<!-- Latest compiled and minified JavaScript -->
 	<script src="/js/bootstrap.min-3.3.7.js"></script>
+	<script src="/js/knockout-3.4.2.js"></script>
 </body>
 </html>

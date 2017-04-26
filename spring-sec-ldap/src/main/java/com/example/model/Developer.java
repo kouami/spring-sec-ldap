@@ -15,6 +15,8 @@ public class Developer {
 	private String lastName;
 	private String fullName;
 	
+	private String emailAddress;
+	
 	/**
 	 * @return the userName
 	 */
@@ -84,5 +86,18 @@ public class Developer {
 	public void setFullName(String fullName) {
 		this.fullName = fullName;
 	}
-	
+
+	/**
+	 * @return the emailAddress
+	 */
+	public String getEmailAddress() {
+		return emailAddress;
+	}
+
+	/**
+	 * @param emailAddress the emailAddress to set
+	 */
+	public void setEmailAddress(String emailAddress) {
+		this.emailAddress = emailAddress;
+	}
 }

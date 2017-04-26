@@ -93,27 +93,6 @@ body, html{
 	<!-- Latest compiled and minified JavaScript -->
 	<script src="/js/bootstrap.min-3.3.7.js"></script>
 	<script src="/js/knockout-3.4.2.js"></script>
-	<script type="text/javascript">
-	   $(document).ready(function(){
-		   
-		  $("#username").val("");
-		  $("#password").val("");
-		 
-		});
-	</script>
-	
-    <script type="text/javascript">
-     function LoginViewModel() {
-    	 this.userName = ko.observable("");
-    	 this.password = ko.observable("");
-    	 //this.buttonEnabled = false;
-    	 this.buttonEnabled = ko.computed(function(){
-    		 return ((this.userName() !=="") && (this.password() !==""));
-    	 
-    	 }, this);
-     }
-     
-     ko.applyBindings(new LoginViewModel());
-    </script>
+	<script type="text/javascript" src="/js/app-utils.js"></script>
 </body>
 </html>
